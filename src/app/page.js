@@ -2,7 +2,7 @@ function Home(){
   return(
     <div>
   <div>Welcome to home page!</div>
-  <h1>Hi, Sparsha</h1>
+  <h2>Varsha made a change</h2>
     </div>
   );
 }
