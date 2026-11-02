@@ -1,171 +1,206 @@
-"use client";
-
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-
 export default function EntryPage() {
-  const router = useRouter();
-  const [mobile, setMobile] = useState("");
 
-  const handleContinue = (e) => {
-    e.preventDefault();
-
-    if (mobile.length !== 10) {
-      alert("Please enter a valid 10-digit mobile number");
-      return;
-    }
-
-    router.push(`/verify-otp?mobile=${mobile}`);
-  };
+  const images = [
+    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+    "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+    "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+    "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
+    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+    "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3"
+  ];
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
+
+    <main style={{
+      minHeight: "100vh",
+      width: "100%",
+      backgroundColor: "#073c6b",
+      position: "relative",
+      overflow: "hidden",
+      fontFamily: "Arial, sans-serif",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between"
+    }}>
+
+      {/* Background Image Collage */}
+
+      <div style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
         width: "100%",
-        backgroundColor: "#083D70",
-        fontFamily: "Arial, sans-serif",
-        display: "flex",
-        flexDirection: "column",
-        overflow: "hidden",
-      }}
-    >
-      {/* Background Image Section */}
+        height: "76%",
+        display: "grid",
+        gridTemplateColumns: "repeat(4, 1fr)",
+        gridTemplateRows: "repeat(4, 1fr)",
+        gap: "12px",
+        padding: "10px",
+        boxSizing: "border-box"
+      }}>
 
-      <div
-        style={{
-          height: "72vh",
-          minHeight: "400px",
-          width: "100%",
-          position: "relative",
-          backgroundImage: `
-            linear-gradient(
-              rgba(5, 48, 85, 0.65),
-              rgba(5, 48, 85, 0.85)
-            ),
-            url('/images/house-collage.jpg')
-          `,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        {/* House Eazy Logo */}
+        {images.map((image, index) => (
 
-        <h1
-          style={{
-            position: "absolute",
-            top: "8%",
-            left: "50%",
-            transform: "translateX(-50%)",
-            fontSize: "clamp(38px, 8vw, 55px)",
-            fontWeight: "bold",
-            color: "white",
-            margin: 0,
-            whiteSpace: "nowrap",
-          }}
-        >
-          House
-          <span style={{ color: "#ED7377" }}>
-            Eazy
-          </span>
-        </h1>
-      </div>
-
-      {/* Login or Signup Section */}
-
-      <div
-        style={{
-          width: "100%",
-          padding: "25px",
-          boxSizing: "border-box",
-          backgroundColor: "#083D70",
-          marginTop: "auto",
-        }}
-      >
-        <h2
-          style={{
-            color: "white",
-            fontSize: "21px",
-            fontWeight: "bold",
-            marginBottom: "18px",
-          }}
-        >
-          Login or Signup
-        </h2>
-
-        <form onSubmit={handleContinue}>
-
-          {/* Mobile Number Input */}
-
-          <input
-            type="tel"
-            placeholder="Mobile number"
-            value={mobile}
-            onChange={(e) =>
-              setMobile(
-                e.target.value.replace(/\D/g, "").slice(0, 10)
-              )
-            }
-            maxLength={10}
-            required
+          <div
+            key={index}
             style={{
+              backgroundImage: `url(${image}?auto=format&fit=crop&w=500&q=80)`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
               width: "100%",
-              height: "74px",
-              padding: "0 25px",
-              boxSizing: "border-box",
-              border: "none",
-              outline: "none",
-              borderRadius: "18px",
-              backgroundColor: "white",
-              fontSize: "20px",
-              color: "#333",
+              height: "100%"
             }}
           />
 
-          {/* Terms and Conditions */}
+        ))}
 
-          <p
+      </div>
+
+
+      {/* Blue Overlay */}
+
+      <div style={{
+        position: "absolute",
+        inset: 0,
+        background: "linear-gradient(to bottom, rgba(3,35,65,0.72), rgba(3,55,99,0.88), #073c6b)",
+        zIndex: 1
+      }} />
+
+
+      {/* Logo */}
+
+      <div style={{
+        position: "relative",
+        zIndex: 2,
+        textAlign: "center",
+        paddingTop: "100px"
+      }}>
+
+        <h1 style={{
+          color: "white",
+          fontSize: "clamp(38px, 9vw, 58px)",
+          fontWeight: "500",
+          margin: 0,
+          letterSpacing: "-2px"
+        }}>
+
+          House
+          <span style={{
+            color: "#f16f73",
+            fontWeight: "bold",
+            fontSize: "1.1em"
+          }}>
+            eEazy
+          </span>
+
+        </h1>
+
+      </div>
+
+
+      {/* Login Section */}
+
+      <section style={{
+        position: "relative",
+        zIndex: 2,
+        width: "100%",
+        padding: "25px",
+        paddingBottom: "35px",
+        boxSizing: "border-box",
+        marginTop: "auto"
+      }}>
+
+        <h2 style={{
+          color: "#dce8f5",
+          fontSize: "22px",
+          fontWeight: "bold",
+          marginBottom: "16px"
+        }}>
+          Login or Signup
+        </h2>
+
+
+        {/* Mobile Number Input */}
+
+        <input
+          type="tel"
+          placeholder="Mobile number"
+          maxLength={10}
+          style={{
+            width: "100%",
+            height: "75px",
+            padding: "0 25px",
+            borderRadius: "18px",
+            border: "none",
+            outline: "none",
+            backgroundColor: "white",
+            color: "#333",
+            fontSize: "23px",
+            boxSizing: "border-box"
+          }}
+        />
+
+
+        {/* Terms and Conditions */}
+
+        <p style={{
+          color: "#b6cce1",
+          fontSize: "17px",
+          marginTop: "38px",
+          marginBottom: "48px",
+          lineHeight: "1.5"
+        }}>
+
+          By continuing, I agree to the{" "}
+
+          <a
+            href="#"
             style={{
-              color: "#B9C9D9",
-              fontSize: "15px",
-              marginTop: "35px",
-              lineHeight: "1.6",
+              color: "#5799d6",
+              textDecoration: "none"
             }}
           >
-            By continuing, I agree to the{" "}
-            <span
-              style={{
-                color: "#5596D4",
-                cursor: "pointer",
-              }}
-            >
-              Terms and Conditions.
-            </span>
-          </p>
+            Terms and Conditions.
+          </a>
 
-          {/* Send OTP Button */}
+        </p>
+
+
+        {/* Send OTP Button */}
+
+        <div style={{
+          display: "flex",
+          justifyContent: "center"
+        }}>
 
           <button
-            type="submit"
+            type="button"
             style={{
-              display: "block",
               width: "200px",
               height: "70px",
-              margin: "48px auto 0",
-              backgroundColor: "#ED7377",
-              color: "white",
               border: "none",
               borderRadius: "15px",
-              fontSize: "21px",
+              backgroundColor: "#ef7372",
+              color: "white",
+              fontSize: "23px",
               fontWeight: "500",
-              cursor: "pointer",
+              cursor: "pointer"
             }}
           >
             Send OTP
           </button>
 
-        </form>
-      </div>
-    </div>
+        </div>
+
+      </section>
+
+    </main>
+
   );
 }
