@@ -1,11 +1,17 @@
-export default function Home(){
-  return(
+"use client";
+
+import { useRouter } from "next/navigation";
+
+export default function Home() {
+  const router = useRouter();
+
+  return (
     <div>
-  <div>Welcome to home page!</div>
-  <h2>Varsha made a change</h2>
-  <h1>Sparsha made a change</h1>
-  <h3>Sparsha made a change</h3>
-  <div>MY BRANCH</div>
+      <h1>Welcome to House Easy</h1>
+
+      <button onClick={() => router.push("/login")}>
+        Login
+      </button>
     </div>
   );
 }
