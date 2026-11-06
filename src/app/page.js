@@ -96,7 +96,8 @@ export default function EntryPage() {
             fontWeight: "bold",
             fontSize: "1.1em"
           }}>
-            eEazy
+            
+          eEazy
           </span>
 
         </h1>
