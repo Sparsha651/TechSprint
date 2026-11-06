@@ -1,208 +1,109 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function EntryPage() {
+    const router = useRouter();
+    const [mobile, setMobile] = useState("");
 
-  const images = [
-    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-    "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
-    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
-    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
-    "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
-    "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
-    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
-    "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
-    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3"
-  ];
+    const handleSendOTP = () => {
+        if (mobile.length !== 10) {
+            alert("Please enter a valid 10-digit mobile number");
+            return;
+        }
 
-  return (
+        router.push("/home");
+    };
 
-    <main style={{
-      minHeight: "100vh",
-      width: "100%",
-      backgroundColor: "#073c6b",
-      position: "relative",
-      overflow: "hidden",
-      fontFamily: "Arial, sans-serif",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-between"
-    }}>
-
-      {/* Background Image Collage */}
-
-      <div style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "76%",
-        display: "grid",
-        gridTemplateColumns: "repeat(4, 1fr)",
-        gridTemplateRows: "repeat(4, 1fr)",
-        gap: "12px",
-        padding: "10px",
-        boxSizing: "border-box"
-      }}>
-
-        {images.map((image, index) => (
-
-          <div
-            key={index}
-            style={{
-              backgroundImage: `url(${image}?auto=format&fit=crop&w=500&q=80)`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              width: "100%",
-              height: "100%"
-            }}
-          />
-
-        ))}
-
-      </div>
-
-
-      {/* Blue Overlay */}
-
-      <div style={{
-        position: "absolute",
-        inset: 0,
-        background: "linear-gradient(to bottom, rgba(3,35,65,0.72), rgba(3,55,99,0.88), #073c6b)",
-        zIndex: 1
-      }} />
-
-
-      {/* Logo */}
-
-      <div style={{
-        position: "relative",
-        zIndex: 2,
-        textAlign: "center",
-        paddingTop: "100px"
-      }}>
-
-        <h1 style={{
-          color: "white",
-          fontSize: "clamp(38px, 9vw, 58px)",
-          fontWeight: "500",
-          margin: 0,
-          letterSpacing: "-2px"
-        }}>
-
-          House
-          <span style={{
-            color: "#f16f73",
-            fontWeight: "bold",
-            fontSize: "1.1em"
-          }}>
-            
-          eEazy
-          </span>
-
-        </h1>
-
-      </div>
-
-
-      {/* Login Section */}
-
-      <section style={{
-        position: "relative",
-        zIndex: 2,
-        width: "100%",
-        padding: "25px",
-        paddingBottom: "35px",
-        boxSizing: "border-box",
-        marginTop: "auto"
-      }}>
-
-        <h2 style={{
-          color: "#dce8f5",
-          fontSize: "22px",
-          fontWeight: "bold",
-          marginBottom: "16px"
-        }}>
-          Login or Signup
-        </h2>
-
-
-        {/* Mobile Number Input */}
-
-        <input
-          type="tel"
-          placeholder="Mobile number"
-          maxLength={10}
-          style={{
-            width: "100%",
-            height: "75px",
-            padding: "0 25px",
-            borderRadius: "18px",
-            border: "none",
-            outline: "none",
-            backgroundColor: "white",
-            color: "#333",
-            fontSize: "23px",
-            boxSizing: "border-box"
-          }}
-        />
-
-
-        {/* Terms and Conditions */}
-
-        <p style={{
-          color: "#b6cce1",
-          fontSize: "17px",
-          marginTop: "38px",
-          marginBottom: "48px",
-          lineHeight: "1.5"
-        }}>
-
-          By continuing, I agree to the{" "}
-
-          <a
-            href="#"
-            style={{
-              color: "#5799d6",
-              textDecoration: "none"
-            }}
-          >
-            Terms and Conditions.
-          </a>
-
-        </p>
-
-
-        {/* Send OTP Button */}
-
+    return (
         <div style={{
-          display: "flex",
-          justifyContent: "center"
+            minHeight: "100vh",
+            background: "linear-gradient(to bottom, #F5C95D, #397FA5, #071D3B)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "20px"
         }}>
 
-          <button
-            type="button"
-            style={{
-              width: "200px",
-              height: "70px",
-              border: "none",
-              borderRadius: "15px",
-              backgroundColor: "#ef7372",
-              color: "white",
-              fontSize: "23px",
-              fontWeight: "500",
-              cursor: "pointer"
-            }}
-          >
-            Send OTP
-          </button>
+            <div style={{
+                width: "100%",
+                maxWidth: "420px",
+                background: "white",
+                borderRadius: "20px",
+                padding: "35px 25px",
+                textAlign: "center",
+                boxShadow: "0 8px 25px rgba(0,0,0,0.2)"
+            }}>
 
+                <h1 style={{
+                    fontSize: "36px",
+                    marginBottom: "10px",
+                    color: "#123F70"
+                }}>
+                    Acre<span style={{ color: "#FF967D" }}>Aura</span>
+                </h1>
+
+                <p style={{
+                    color: "#555",
+                    fontSize: "16px",
+                    marginBottom: "30px"
+                }}>
+                    Find Your Perfect Home
+                </p>
+
+                <h2 style={{
+                    fontSize: "23px",
+                    color: "#123F70",
+                    marginBottom: "20px"
+                }}>
+                    Login or Signup
+                </h2>
+
+                <input
+                    type="tel"
+                    placeholder="Enter mobile number"
+                    value={mobile}
+                    onChange={(e) =>
+                        setMobile(e.target.value.replace(/\D/g, "").slice(0, 10))
+                    }
+                    style={{
+                        width: "100%",
+                        padding: "15px",
+                        border: "1px solid #ccc",
+                        borderRadius: "10px",
+                        fontSize: "16px",
+                        boxSizing: "border-box",
+                        marginBottom: "15px"
+                    }}
+                />
+
+                <p style={{
+                    fontSize: "12px",
+                    color: "#777",
+                    marginBottom: "20px"
+                }}>
+                    By continuing, you agree to our Terms and Conditions.
+                </p>
+
+                <button
+                    onClick={handleSendOTP}
+                    style={{
+                        width: "100%",
+                        padding: "15px",
+                        background: "linear-gradient(135deg, #FF967D, #E96F68)",
+                        color: "white",
+                        border: "none",
+                        borderRadius: "10px",
+                        fontSize: "17px",
+                        fontWeight: "bold",
+                        cursor: "pointer"
+                    }}
+                >
+                    Send OTP
+                </button>
+
+            </div>
         </div>
-
-      </section>
-
-    </main>
-
-  );
+    );
 }
