@@ -1,0 +1,141 @@
+.signup-card {
+  width: 100%;
+  max-width: 520px;
+  max-height: 82vh;
+  overflow-y: auto;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 18px;
+  background: rgba(7, 61, 112, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.signup-card h1 {
+  text-align: center;
+  font-size: 27px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.signup-description {
+  text-align: center;
+  color: #d5e2ee;
+  font-size: 14px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.signup-field {
+  margin-bottom: 15px;
+}
+
+.signup-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.signup-field input,
+.signup-field select {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #173b5d;
+  font-size: 14px;
+  outline: none;
+}
+
+.signup-field input:focus,
+.signup-field select:focus {
+  border-color: #ff807d;
+  box-shadow: 0 0 0 2px rgba(255, 128, 125, 0.18);
+}
+
+.signup-field input::placeholder {
+  color: #8796a5;
+}
+
+.signup-phone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.signup-phone span {
+  padding: 12px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #173b5d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.signup-phone input {
+  flex: 1;
+  min-width: 0;
+}
+
+.signup-submit {
+  width: 100%;
+  margin-top: 8px;
+  padding: 13px;
+  background: #ff807d;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.signup-submit:hover {
+  background: #e96f68;
+}
+
+.signup-login {
+  text-align: center;
+  margin-top: 20px;
+  color: #e0eaf3;
+  font-size: 14px;
+}
+
+.signup-login a {
+  color: #ff9691;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-login a:hover {
+  text-decoration: underline;
+}
+
+.signup-terms {
+  text-align: center;
+  margin-top: 15px;
+  color: #bdccda;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .signup-card {
+    max-height: 78vh;
+    padding: 22px 18px;
+  }
+
+  .signup-card h1 {
+    font-size: 23px;
+  }
+
+  .signup-field input,
+  .signup-field select {
+    font-size: 13px;
+  }
+}
