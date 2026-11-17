@@ -135,6 +135,7 @@ export default function SignupPage() {
                 Buying Commercial Property
               </option>
               <option value="Selling a property">Selling a Property</option>
+              <option value="Selling a Land">Selling a Land</option>
               <option value="Exploring property investment">
                 Exploring Property Investment
               </option>
