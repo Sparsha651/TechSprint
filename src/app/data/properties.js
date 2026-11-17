@@ -72,4 +72,45 @@ export const properties = [
     description: "Spacious homes with convenient access to nearby facilities.",
     features: ["3 BHK", "1450 sqft", "Modern Amenities"],
   },
+  {
+  id: 7,
+  name: "Green Valley Apartments",
+  type: "Apartment",
+  location: "Mangalore",
+  city: "Mangalore",
+  bhk: 2,
+  area: 1200,
+  price: "₹75 Lac",
+  image: "IMAGE_URL",
+  description: "Spacious apartment with modern facilities.",
+  features: ["2 BHK", "1200 sqft"]
+},
+{
+  id: 8,
+  name: "Green Valley Residential Plot",
+  type: "Land",
+  location: "Mangalore",
+  city: "Mangalore",
+  bhk: null,
+  area: 2400,
+  price: "₹40 Lac",
+  image: "IMAGE_URL",
+  description: "Residential plot suitable for building a home.",
+  features: ["Residential Plot", "2400 sqft", "Clear Title"]
+},
+{
+  id: 9,
+  name: "Sunshine Estate Plot",
+  type: "Land",
+  location: "Surathkal, Mangalore",
+  city: "Mangalore",
+  bhk: null,
+  area: 1800,
+  price: "₹32 Lac",
+  image: "IMAGE_URL",
+  description: "Residential plot with convenient access to nearby facilities.",
+  features: ["Residential Plot", "1800 sqft", "Land"],
+},
+
+
 ];
