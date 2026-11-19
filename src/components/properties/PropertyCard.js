@@ -1,3 +1,4 @@
+"use client";
 
 import Link from "next/link";
 
@@ -26,9 +27,14 @@ export default function PropertyCard({ property }) {
   return (
     <article className="property-card">
       <div className="property-image">
-        <img src={property.image} alt={property.name} />
+        <img
+          src={property.image}
+          alt={property.name}
+        />
 
-        <span className="featured">Featured</span>
+        <span className="featured">
+          {property.type}
+        </span>
 
         <button
           className="share-button"
@@ -40,20 +46,26 @@ export default function PropertyCard({ property }) {
         </button>
       </div>
 
-      <div className="property-details">
+      <div className="property-card-content">
         <h3>{property.name}</h3>
 
-        <p className="location">📍 {property.location}</p>
+        <p className="property-location">
+          📍 {property.location}
+        </p>
 
         <div className="property-info">
-          <span>{property.bhk}</span>
-          <span>|</span>
-          <span>{property.area}</span>
+          {property.bhk && (
+            <span>{property.bhk} BHK</span>
+          )}
+
+          {property.bhk && <span>|</span>}
+
+          <span>{property.area} sqft</span>
         </div>
 
         <div className="price-section">
           <h3>{property.price}</h3>
-          <small>Starting Price</small>
+          <small>Listed Price</small>
         </div>
 
         <Link
