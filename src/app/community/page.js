@@ -9,6 +9,8 @@ import CommunityTabs from "../../components/community/CommunityTabs";
 import CommunityComposer from "../../components/community/CommunityComposer";
 import CommunityPostCard from "../../components/community/CommunityPostCard";
 import CommunitySidebar from "../../components/community/CommunitySidebar";
+import FeedbackSection from "../../components/community/FeedbackSection";
+import { initialCommunityReviews } from "../../data/communityReviews";
 
 import { initialCommunityPosts } from "../../data/communityPosts";
 
@@ -17,7 +19,14 @@ import "./page.css";
 export default function CommunityPage() {
   const [posts, setPosts] = useState(initialCommunityPosts);
   const [activeTab, setActiveTab] = useState("All Posts");
+    const [reviews, setReviews] = useState(initialCommunityReviews);
 
+function addReview(newReview) {
+  setReviews((previousReviews) => [
+    newReview,
+    ...previousReviews,
+  ]);
+}
   function addPost(newPost) {
     setPosts((previousPosts) => [newPost, ...previousPosts]);
   }
@@ -86,7 +95,10 @@ export default function CommunityPage() {
           <CommunitySidebar />
 
         </div>
-
+    <FeedbackSection
+  reviews={reviews}
+  onAddReview={addReview}
+    />
       </main>
 
       <Navbar />
