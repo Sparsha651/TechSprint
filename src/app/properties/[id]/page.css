@@ -1,0 +1,133 @@
+.property-detail-page {
+  min-height: 100vh;
+  background: #f7f9fc;
+  color: #102b50;
+}
+
+.property-detail-container {
+  padding: 35px 7% 60px;
+}
+
+.back-properties {
+  display: inline-block;
+  text-decoration: none;
+  color: #24476e;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.back-properties:hover {
+  color: #dcae29;
+}
+
+.property-detail-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #e8edf4;
+  box-shadow: 0 8px 25px rgba(16, 43, 80, 0.06);
+}
+
+.property-detail-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.property-detail-content {
+  padding: 35px;
+}
+
+.detail-type {
+  display: inline-block;
+  background: #fff2cb;
+  color: #a47a12;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.property-detail-content h1 {
+  font-size: 32px;
+  margin: 18px 0 12px;
+}
+
+.property-detail-content h2 {
+  color: #c39219;
+  font-size: 27px;
+  margin: 20px 0;
+}
+
+.property-detail-content h3 {
+  font-size: 19px;
+  margin: 25px 0 12px;
+}
+
+.property-detail-content > p {
+  color: #718096;
+  line-height: 1.8;
+}
+
+.detail-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.detail-info span {
+  background: #edf3fb;
+  color: #24476e;
+  padding: 10px 15px;
+  border-radius: 7px;
+  font-size: 13px;
+}
+
+.property-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.property-features span {
+  background: #f5f6f8;
+  color: #526078;
+  padding: 9px 13px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.property-not-found {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.property-not-found p {
+  color: #718096;
+  margin: 15px 0;
+}
+
+.property-not-found a {
+  color: #c39219;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .property-detail-container {
+    padding: 25px 5% 40px;
+  }
+
+  .property-detail-image {
+    height: 250px;
+  }
+
+  .property-detail-content {
+    padding: 22px;
+  }
+
+  .property-detail-content h1 {
+    font-size: 25px;
+  }
+}
