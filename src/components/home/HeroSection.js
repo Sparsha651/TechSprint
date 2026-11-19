@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-
+import Logo from "../common/Logo.jsx";
 export default function HeroSection() {
   return (
     <section className="home-hero">
@@ -10,9 +10,7 @@ export default function HeroSection() {
       <header className="home-header">
         <div className="header-top">
 
-          <Link href="/home" className="brand-logo">
-            ACRE<span>AURA</span>
-          </Link>
+          <Logo />
 
           <div className="header-icons">
             <Link href="/notifications" aria-label="Notifications">

@@ -1,6 +1,9 @@
+import Logo from "../common/Logo.jsx";
 export default function CommunityHeader() {
   return (
     <section className="community-header">
+      <Logo />
+      
       <h1>ACRE AURA Community</h1>
 
       <p>
