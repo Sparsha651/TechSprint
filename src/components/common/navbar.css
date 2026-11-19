@@ -1,0 +1,40 @@
+.bottom-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #10264f;
+  padding: 8px 5px;
+  z-index: 1000;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.bottom-nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #cbd5e1;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-icon {
+  font-size: 23px;
+  line-height: 1;
+}
+
+.bottom-nav-item.active {
+  color: #f07861;
+}
+
+.bottom-nav-item:hover {
+  color: #f07861;
+}
