@@ -1,0 +1,39 @@
+.welcome-section {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+
+.welcome-section h1 {
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.welcome-section p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #e0edf7;
+    margin-bottom: 30px;
+}
+
+.button-section {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    max-width: 330px;
+    margin: 0 auto;
+}
+
+.button-section .signup-button {
+    background: rgba(255,255,255,0.95);
+    color: #073D70;
+    border: 2px solid white;
+}
+
+.bottom-text {
+    margin-top: 30px !important;
+    margin-bottom: 0 !important;
+    font-size: 13px !important;
+}
