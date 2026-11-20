@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "ACRE ARAURA | Discover Your Property",
+  title: "ACRE AURA | Discover Your Property",
   description:
     "Explore homes, apartments and land with ACRE ARAURA.",
 };
