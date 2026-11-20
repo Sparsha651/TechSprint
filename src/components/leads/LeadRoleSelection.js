@@ -11,7 +11,6 @@ export default function LeadRoleSelection() {
       {/* Leads Header */}
       <section className="leads-header">
         <Logo/>
-        <h1 style={{ textAlign: "center" }}>LEADS</h1>
 
         <h1>Connect. Explore. Discover.</h1>
 
@@ -32,7 +31,7 @@ export default function LeadRoleSelection() {
 
           {/* Buyer Card */}
           <article className="lead-role-card">
-            <div className="role-icon">🏡</div>
+            <div className="role-icon">🏢</div>
 
             <h3>I'm a Buyer</h3>
 

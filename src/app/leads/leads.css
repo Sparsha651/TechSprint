@@ -8,10 +8,13 @@
 /* Leads Header */
 
 .leads-header {
+  width: 100%;
+  box-sizing: border-box;
   background: #10264f;
-  padding: 55px 7%;
   color: #ffffff;
+  padding: 30px 35px 40px;
 }
+
 
 .leads-label {
   color: #f07861;
@@ -23,14 +26,18 @@
 .leads-header h1 {
   font-size: 36px;
   margin: 18px 0 12px;
+  margin-top: 50px;
   font-weight: 700;
+  text-align: center;
 }
 
 .leads-header p {
   color: #e4eaf5;
   font-size: 16px;
   line-height: 1.7;
-  max-width: 650px;
+  margin-left:auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 /* Buyer and Seller Selection */
@@ -117,4 +124,14 @@
   .lead-role-section h2 {
     font-size: 22px;
   }
+}
+.leads-header {
+  position: relative;
+}
+.leads-header .acre-aura-logo {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  right: auto;
+  transform: none;
 }

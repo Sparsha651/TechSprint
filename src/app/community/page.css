@@ -14,7 +14,7 @@
 .community-header {
   width: 100%;
   padding: 45px 6%;
-  background: #10264f;
+  background: #172554;
   text-align: center;
   color: #ffffff;
 }
@@ -624,4 +624,15 @@
   .feedback-heading h2 {
     font-size: 22px;
   }
+}
+.community-header {
+  position: relative;
+}
+
+.community-header .acre-aura-logo {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  right: auto;
+  transform: none;
 }
