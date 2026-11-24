@@ -22,6 +22,7 @@
   font-size: 32px;
   font-weight: 800;
   margin-bottom: 12px;
+  color: #a7cef5;
 }
 
 .properties-hero p {
@@ -279,4 +280,16 @@
   .property-card-content {
     padding: 17px;
   }
+}
+
+
+.properties-hero {
+  position: relative;
+}
+
+.properties-hero .header-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 30px;
 }

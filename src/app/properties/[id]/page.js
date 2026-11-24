@@ -81,8 +81,6 @@ export default function PropertyDetailsPage() {
 
             <p>{property.description}</p>
 
-            <h3>Property Features</h3>
-
             <div className="property-features">
               {property.features?.map((feature, index) => (
                 <span key={index}>

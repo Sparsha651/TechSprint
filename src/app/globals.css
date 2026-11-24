@@ -179,3 +179,28 @@ img {
     font-size: 14px;
   }
 }
+
+.acre-aura-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.logo-acre {
+  color: #f3f4f5 !important;
+  display: inline-block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.logo-aura {
+  color: #f07861 !important;
+  display: inline-block;
+  visibility: visible;
+  opacity: 1;
+}

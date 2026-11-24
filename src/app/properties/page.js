@@ -5,6 +5,7 @@ import Link from "next/link";
 import Navbar from "../../components/common/navbar";
 import { useProperties } from "../../context/PropertyContext";
 import "./page.css";
+import Logo from "../../components/common/Logo";
 
 export default function PropertiesPage() {
   const { properties } = useProperties();
@@ -31,7 +32,15 @@ export default function PropertiesPage() {
       <Navbar />
 
       <main className="properties-page">
+
+    
+
         <section className="properties-hero">
+
+           <div className="header-logo">
+    <Logo />
+  </div>
+  
           <h1>Discover Your Perfect Property</h1>
 
           <p>
@@ -115,7 +124,6 @@ export default function PropertiesPage() {
                       )}
 
                       <span>{property.area} sqft</span>
-
                       <span>{property.city}</span>
                     </div>
 

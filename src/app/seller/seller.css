@@ -1,0 +1,127 @@
+.seller-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding-bottom: 110px;
+}
+
+.seller-header {
+  background: #10264f;
+  color: white;
+  padding: 55px 35px;
+}
+
+.seller-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.seller-header p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #dbe5f5;
+  line-height: 1.7;
+  max-width: 550px;
+  margin: 0;
+}
+
+.seller-form-section {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border: 1px solid #e5e9f1;
+  border-radius: 14px;
+}
+
+.seller-form-heading h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #142b50;
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
+}
+
+.seller-form-heading p {
+  font-size: 15px;
+  color: #718096;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.seller-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.seller-form label {
+  color: #10264f;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.seller-form input,
+.seller-form select,
+.seller-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px;
+  border: 1px solid #d8deea;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.seller-form button {
+  padding: 15px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #f07861;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.seller-form button:hover {
+  background: #e56852;
+}
+
+.seller-success-message {
+  padding: 12px;
+  border-radius: 8px;
+  background: #e8f6ee;
+  color: #176b43;
+}
+
+@media (max-width: 600px) {
+  .seller-header {
+    padding: 40px 22px;
+  }
+
+  .seller-header h1 {
+    font-size: 28px;
+  }
+
+  .seller-form-section {
+    margin: 25px 15px;
+    padding: 22px;
+  }
+}
+
+.seller-header {
+  position: relative;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 30px;
+}
