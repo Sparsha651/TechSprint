@@ -1,0 +1,137 @@
+/* Leads Main Content */
+
+.leads-content {
+     width: 100%;
+  padding-bottom: 100px;
+}
+
+/* Leads Header */
+
+.leads-header {
+  width: 100%;
+  box-sizing: border-box;
+  background: #10264f;
+  color: #ffffff;
+  padding: 30px 35px 40px;
+}
+
+
+.leads-label {
+  color: #f07861;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.leads-header h1 {
+  font-size: 36px;
+  margin: 18px 0 12px;
+  margin-top: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.leads-header p {
+  color: #e4eaf5;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-left:auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Buyer and Seller Selection */
+
+.lead-role-section {
+  max-width: 1000px;
+  margin: 45px auto;
+  padding: 0 25px;
+  text-align: center;
+}
+
+.lead-role-section h2 {
+  color: #10264f;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.lead-role-section > p {
+  color: #718096;
+  margin-bottom: 30px;
+}
+
+.lead-role-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.lead-role-card {
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 16px;
+  border: 1px solid #e5eaf2;
+  box-shadow: 0 5px 20px rgba(16, 38, 79, 0.06);
+}
+
+.role-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.lead-role-card h3 {
+  color: #10264f;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.lead-role-card p {
+  color: #718096;
+  line-height: 1.6;
+  min-height: 50px;
+}
+
+.lead-role-card button {
+  background: #10264f;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.lead-role-card button:hover {
+  background: #f07861;
+}
+
+/* Responsive Design */
+
+@media (max-width: 650px) {
+  .leads-header {
+    padding: 40px 25px;
+  }
+
+  .leads-header h1 {
+    font-size: 28px;
+  }
+
+  .lead-role-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .lead-role-section h2 {
+    font-size: 22px;
+  }
+}
+.leads-header {
+  position: relative;
+}
+.leads-header .acre-aura-logo {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  right: auto;
+  transform: none;
+}

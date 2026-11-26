@@ -1,4 +1,3 @@
-
 export const properties = [
   {
     id: 1,

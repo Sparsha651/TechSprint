@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+.auth-layout {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    width: 100%;
+    overflow: hidden;
+    background: #073D70;
+    font-family: Arial, sans-serif;
+}
+
+.background-gallery {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    background: #073D70;
+}
+
+.gallery-image {
+    background-size: cover;
+    background-position: center;
+}
+
+.blue-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(7, 61, 112, 0.72),
+        rgba(7, 61, 112, 0.82) 45%,
+        rgba(7, 61, 112, 0.94) 75%,
+        #073D70
+    );
+}
+
+.logo {
+    position: absolute;
+    z-index: 2;
+    top: 9%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 46px;
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+
+.logo span {
+    color: #FF807D;
+}
+
+.auth-content {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    left: 0;
+    top: 52%;
+    transform: translateY(-50%);
+    padding: 20px;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 17px;
+    border: none;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #FF967D, #E96F68);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.auth-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(233, 111, 104, 0.35);
+}
+
+.auth-button:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 600px) {
+    .logo {
+        top: 8%;
+        font-size: 43px;
+    }
+}

@@ -1,0 +1,74 @@
+.login-section {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.login-card {
+    padding: 35px 28px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.97);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+.login-card h1 {
+    color: #073D70;
+    text-align: center;
+    font-size: 27px;
+}
+
+.login-card p {
+    color: #68798a;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.login-card label {
+    display: block;
+    color: #073D70;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.phone-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    padding: 0 12px;
+    height: 55px;
+    border: 1px solid #cbd8e5;
+    border-radius: 12px;
+    background: #f8fbff;
+}
+
+.phone-input span {
+    color: #073D70;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.phone-input input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #073D70;
+    font-size: 15px;
+}
+
+.signup-text {
+    margin-top: 22px;
+}
+
+.signup-text button {
+    display: block;
+    margin: 8px auto 0;
+    border: none;
+    background: none;
+    color: #E96F68;
+    font-weight: bold;
+    cursor: pointer;
+}
