@@ -24,10 +24,11 @@
 }
 
 .leads-header h1 {
-  font-size: 36px;
+   font-size: 32px;
+  font-weight: 800;
   margin: 18px 0 12px;
   margin-top: 50px;
-  font-weight: 700;
+  color:#a7cef5;
   text-align: center;
 }
 
