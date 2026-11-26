@@ -1,6 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-/* GLOBAL RESET */
+/* =================================
+   ACREAURA GLOBAL STYLES
+================================= */
+
+:root {
+  --navy: #073D70;
+  --navy-light: #0B568E;
+  --coral: #FF807D;
+  --white: #FFFFFF;
+  --background: #F5F8FC;
+  --text: #073D70;
+  --muted: #718096;
+  --border: #D9E2EC;
+}
+
+/* Reset */
 
 * {
   margin: 0;
@@ -10,45 +25,154 @@
 
 html {
   scroll-behavior: smooth;
+  min-height: 100%;
 }
 
 body {
-  font-family: 'Inter', Arial, sans-serif;
-  background: #f5f7fb;
-  color: #172554;
   min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
-/* COMMON ELEMENTS */
+/* Common headings */
 
-button,
-input,
-textarea,
-select {
-  font-family: inherit;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--navy);
+  line-height: 1.3;
 }
 
-button {
-  cursor: pointer;
+p {
+  line-height: 1.6;
 }
+
+/* Links */
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
-/* MAIN PAGE */
+/* Buttons */
 
-main {
-  width: 100%;
+button {
+  font-family: inherit;
+  cursor: pointer;
 }
 
-/* IMAGES */
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Form elements */
+
+input,
+select,
+textarea,
+button {
+  font-size: inherit;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* Focus accessibility */
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+}
+
+/* Images */
 
 img {
   max-width: 100%;
 }
 
-/* RESPONSIVE */
+/* Common page container */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Common buttons */
+
+.primary-button {
+  background: var(--navy);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 22px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.primary-button:hover {
+  background: var(--navy-light);
+}
+
+.secondary-button {
+  background: var(--coral);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 22px;
+  font-weight: 600;
+}
+
+/* Selection color */
+
+::selection {
+  background: var(--coral);
+  color: var(--white);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EDF2F7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #AAB8C7;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--navy);
+}
+
+/* Responsive defaults */
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 
 @media (max-width: 480px) {
   body {
@@ -69,9 +193,15 @@ img {
 }
 
 .logo-acre {
-  color: #f3f4f5;
+  color: #f3f4f5 !important;
+  display: inline-block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .logo-aura {
-  color: #f07861;
+  color: #f07861 !important;
+  display: inline-block;
+  visibility: visible;
+  opacity: 1;
 }

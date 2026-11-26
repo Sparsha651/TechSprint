@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "../components/properties/properties.css";
 import Providers from "./providers";
 
 const geistSans = Geist({
@@ -13,9 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "ACRE AURA | Discover Your Property",
-  description:
-    "Explore homes, apartments and land with ACRE ARAURA.",
+  title: "AcreAura | Discover Your Property",
+  description: "Explore homes, land and properties with AcreAura.",
 };
 
 export default function RootLayout({ children }) {
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
-      <body>
+      <body className="min-h-full flex flex-col">
         <Providers>{children}</Providers>
       </body>
     </html>

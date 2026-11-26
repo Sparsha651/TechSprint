@@ -73,7 +73,7 @@ export const properties = [
     bhk: 3,
     area: 1450,
     price: "₹1.30 Cr",
-    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900",
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900",
     description: "Spacious homes with convenient access to nearby facilities.",
     features: ["3 BHK", "1450 sqft", "Modern Amenities"],
   },
@@ -86,7 +86,7 @@ export const properties = [
     bhk: 2,
     area: 1200,
     price: "₹75 Lac",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&fit=crop",
     description: "Spacious apartment with modern facilities.",
     features: ["2 BHK", "1200 sqft", "Modern Facilities"],
   },
@@ -112,8 +112,8 @@ export const properties = [
     bhk: null,
     area: 1800,
     price: "₹32 Lac",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900",
     description: "Residential plot with convenient access to nearby facilities.",
     features: ["Residential Plot", "1800 sqft", "Land"],
   },
-]
+];
